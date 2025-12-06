@@ -32,7 +32,7 @@ export function Navbar() {
       window.location.href = '/' + href;
       return;
     }
-    
+
     if (href.startsWith('#')) {
       e.preventDefault();
       const element = document.querySelector(href);
@@ -53,15 +53,13 @@ export function Navbar() {
       )}
     >
       <nav className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+        {/* Logo redirects user */}
         <a 
           href="#home" 
           onClick={(e) => handleNavClick(e, '#home')}
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 cursor-pointer"
         >
-          <img src={logo} alt="AA Logo" className="h-10 w-10" />
-          <span className="font-display text-xl font-bold text-foreground">
-            Abdelrhman<span className="text-gradient">.dev</span>
-          </span>
+          <img src={logo} alt="Logo" className="h-20 w-20" />
         </a>
 
         {/* Desktop Navigation */}
@@ -77,11 +75,6 @@ export function Navbar() {
               </a>
             </li>
           ))}
-          <li>
-            <Link to="/projects" className="nav-link text-sm font-medium">
-              All Projects
-            </Link>
-          </li>
         </ul>
 
         <div className="hidden md:block">
@@ -119,15 +112,6 @@ export function Navbar() {
               </a>
             </li>
           ))}
-          <li>
-            <Link
-              to="/projects"
-              className="block py-3 px-4 text-foreground hover:bg-secondary rounded-lg transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              All Projects
-            </Link>
-          </li>
           <li className="pt-2">
             <Button variant="hero" className="w-full" asChild>
               <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>Hire Me</a>
