@@ -28,7 +28,7 @@ export function HeroSection() {
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 animate-fade-in-up animation-delay-100">
               Abdelrhman Ashraf
             </h1>
-            <h2 className="font-display text-2xl md:text-3xl font-semibold text-gradient mb-6 animate-fade-in-up animation-delay-200">Data Scientist & AI Engineer</h2><h2 className="font-display text-2xl md:text-3xl font-semibold text-gradient mb-6 animate-fade-in-up animation-delay-200">
+            <h2 className="font-display text-2xl md:text-3xl font-semibold text-gradient mb-6 animate-fade-in-up animation-delay-200">
               Data Scientist & Machine Learning Engineer
             </h2>
             <p className="text-muted-foreground text-lg md:text-xl max-w-xl mx-auto lg:mx-0 mb-8 animate-fade-in-up animation-delay-300">
