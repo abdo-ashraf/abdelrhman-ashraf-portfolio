@@ -1,4 +1,4 @@
-import { Code2, Brain, Database, Cloud, Server, BarChart3, GraduationCap, Briefcase } from 'lucide-react';
+import { Code2, Brain, Database, Cloud, Server, BarChart3, GraduationCap, Briefcase, Table, Globe } from 'lucide-react';
 const skills = [{
   name: 'Python',
   icon: Code2
@@ -23,6 +23,12 @@ const skills = [{
 }, {
   name: 'Docker / vLLM',
   icon: Server
+}, {
+  name: 'Excel (Power Query, Power Pivot)',
+  icon: Table
+}, {
+  name: 'Web Scraping',
+  icon: Globe
 }];
 const education = [{
   degree: 'Deep Learning for Computer Vision Diploma',
