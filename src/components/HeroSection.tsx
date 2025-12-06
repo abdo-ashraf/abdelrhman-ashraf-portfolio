@@ -1,13 +1,8 @@
 import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import profilePhoto from '@/assets/profile-photo.jpg';
-
 export function HeroSection() {
-  return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
-    >
+  return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" />
@@ -19,11 +14,7 @@ export function HeroSection() {
           {/* Profile Image */}
           <div className="relative animate-fade-in-up">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-card-hover border-4 border-accent/20 animate-pulse-glow">
-              <img
-                src={profilePhoto}
-                alt="Abdelrhman Ashraf - Data Scientist & ML Engineer"
-                className="w-full h-full object-cover"
-              />
+              <img src={profilePhoto} alt="Abdelrhman Ashraf - Data Scientist & ML Engineer" className="w-full h-full object-cover" />
             </div>
             {/* Decorative ring */}
             <div className="absolute -inset-4 border-2 border-dashed border-accent/30 rounded-full animate-[spin_20s_linear_infinite]" />
@@ -37,7 +28,7 @@ export function HeroSection() {
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 animate-fade-in-up animation-delay-100">
               Abdelrhman Ashraf
             </h1>
-            <h2 className="font-display text-2xl md:text-3xl font-semibold text-gradient mb-6 animate-fade-in-up animation-delay-200">
+            <h2 className="font-display text-2xl md:text-3xl font-semibold text-gradient mb-6 animate-fade-in-up animation-delay-200">Data Scientist & AI Engineer</h2><h2 className="font-display text-2xl md:text-3xl font-semibold text-gradient mb-6 animate-fade-in-up animation-delay-200">
               Data Scientist & Machine Learning Engineer
             </h2>
             <p className="text-muted-foreground text-lg md:text-xl max-w-xl mx-auto lg:mx-0 mb-8 animate-fade-in-up animation-delay-300">
@@ -63,6 +54,5 @@ export function HeroSection() {
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
