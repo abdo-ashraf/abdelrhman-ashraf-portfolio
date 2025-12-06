@@ -59,7 +59,7 @@ export function AboutSection() {
 
         {/* Bio */}
         <div className="max-w-3xl mx-auto mb-16">
-          <p className="text-lg text-muted-foreground leading-relaxed text-center">I'm a Data Scientist and AI Engineer passionate about designing intelligent systems that solve real-world problems. I specialize in deep learning, LLMs, AI agents, and building scalable end-to-end ML pipelines. I love solving complex challenges, optimizing ML ecosystems, and continuously learning to push my technical boundaries.</p>
+          <p className="text-lg text-muted-foreground leading-relaxed text-center">I'm a Data Scientist and AI Engineer passionate about designing intelligent systems that solve real-world problems. I specialize in deep learning, LLMs, AI agents, and building scalable end-to-end ML pipelines. I love solving complex challenges, optimizing ML ecosystems, and continuously learning to push my boundaries.</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
