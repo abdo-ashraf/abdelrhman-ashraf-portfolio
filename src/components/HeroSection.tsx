@@ -10,7 +10,7 @@ export function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-24">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div className="flex flex-col items-center gap-12">
           {/* Profile Image */}
           <div className="relative animate-fade-in-up">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-card-hover border-4 border-accent/20 animate-pulse-glow">
@@ -21,7 +21,7 @@ export function HeroSection() {
           </div>
 
           {/* Content */}
-          <div className="flex-1 text-center lg:text-left">
+          <div className="flex-1 text-center">
             <p className="text-accent font-medium mb-3 animate-fade-in-up">
               👋 Hello, I'm
             </p>
@@ -31,12 +31,12 @@ export function HeroSection() {
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-gradient mb-6 animate-fade-in-up animation-delay-200">
               Data Scientist & Machine Learning Engineer
             </h2>
-            <p className="text-muted-foreground text-lg md:text-xl max-w-xl mx-auto lg:mx-0 mb-8 animate-fade-in-up animation-delay-300">
+            <p className="text-muted-foreground text-lg md:text-xl max-w-xl mx-auto mb-8 animate-fade-in-up animation-delay-300">
               Passionate about building intelligent systems, exploring AI agents, 
               and developing end-to-end ML solutions that solve real-world problems.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-400">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-400">
               <Button variant="hero" size="xl" asChild>
                 <a href="#contact">Get In Touch</a>
               </Button>
