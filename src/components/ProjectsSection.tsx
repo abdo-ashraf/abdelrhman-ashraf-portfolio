@@ -17,52 +17,53 @@ const projects = [
     description:
       "FastAPI-based agent using LangChain & LLMs to convert unstructured vulnerability text into structured Pydantic models. Features Dockerized deployment and Google Search enrichment pipeline.",
     tags: ["FastAPI", "LangChain", "LLMs", "Docker"],
-    github: "https://github.com/abdo-ashraf/Vulnerability-Analyzer-Agent",
-    image: "/projects/vuln-agent.png", // <-- add your real image
+    link: "https://github.com/abdo-ashraf/Vulnerability-Analyzer-Agent",
+    image: "src/assets/projects/vuln-agent.png",
   },
   {
     title: "Excel Jobs Data Analytics Dashboard",
     description:
       "End-to-end data analytics pipeline using Power Query ETL, Power Pivot modeling, DAX, and dynamic dashboards analyzing global data-jobs trends.",
     tags: ["Power Query", "Power Pivot", "DAX", "Analytics"],
-    github: "https://github.com/abdo-ashraf/Excel-Jobs-Data-Analytics-project",
-    image: "/projects/excel-dashboard.png",
+    link: "https://github.com/abdo-ashraf/Excel-Jobs-Data-Analytics-project",
+    image: "src/assets/projects/excel-dashboard.png",
   },
   {
     title: "Gemma-3 RL Fine-Tuning Pipeline",
     description:
       "Reinforcement learning fine-tuning pipeline for Gemma-3-1B using GRPO & LoRA, optimized for memory efficiency and performance.",
     tags: ["PyTorch", "RL", "LoRA", "GRPO"],
-    github: "https://github.com/abdo-ashraf/Gemma-3-RL-Finetuning",
-    image: "/projects/gemma.png",
+    link: "https://github.com/abdo-ashraf/Gemma-3-RL-Finetuning",
+    image: "src/assets/projects/gemma.png",
   },
   {
     title: "GPU Optimization Framework",
     description:
       "Framework implementing mixed precision training, Torch Compile, and memory optimization techniques for faster model training.",
     tags: ["PyTorch", "CUDA", "Optimization"],
-    github:
+    link:
       "https://github.com/abdo-ashraf/Optimizing-GPU-Utilization-at-Training",
-    image: "/projects/gpu-opt.png",
+    image: "src/assets/projects/gpu-opt.png",
   },
   {
     title: "NMT Multi-Model Training",
     description:
       "Neural Machine Translation framework supporting multiple model architectures with unified training pipeline and evaluation metrics.",
     tags: ["NLP", "Transformers", "PyTorch"],
-    github:
+    link:
       "https://github.com/abdo-ashraf/NMT-MultiModel-Training-Framework",
-    image: "/projects/nmt.png",
+    image: "src/assets/projects/nmt.png",
   },
   {
-    title: 'Image Classification & Localization',
+    title: "Image Classification & Localization",
     description:
       "Deep learning model for simultaneous image classification and object localization with custom loss functions and augmentation strategies.",
-    tags: ['Computer Vision', 'CNN', 'TensorFlow'],
-    github: 'http://www.github.com/abdo-ashraf/Image-Classification-with-localization',
-    image: "/projects/localization.png"
-  }
-  ];
+    tags: ["Computer Vision", "CNN", "TensorFlow"],
+    link:
+      "http://www.github.com/abdo-ashraf/Image-Classification-with-localization",
+    image: "src/assets/projects/localization.png",
+  },
+];
 
 export function ProjectsSection() {
   const [showAll, setShowAll] = useState(false);
@@ -72,7 +73,8 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
-        {/* Section Header */}
+
+        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="section-title mb-4">Featured Projects</h2>
           <p className="section-subtitle mx-auto">
@@ -98,21 +100,23 @@ export function ProjectsSection() {
               >
                 <Card
                   className="group hover:-translate-y-2 bg-card border-border cursor-pointer transition-transform"
-                  onClick={() => window.open(project.github, "_blank")}
+                  onClick={() => window.open(project.link, "_blank")}
                 >
-                  {/* Image */}
-                  <div className="w-full h-40 overflow-hidden rounded-t-xl">
+                  {/* Image wrapper with overlay icon */}
+                  <div className="w-full h-60 overflow-hidden rounded-t-xl relative">
                     <img
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
+
+                    {/* GitHub overlay bottom-left */}
+                    <div className="absolute bottom-2 left-2 bg-black/70 p-2 rounded-lg">
+                      <Github className="w-5 h-5 text-white" />
+                    </div>
                   </div>
 
                   <CardHeader>
-                    <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                      <Github className="w-6 h-6 text-accent" />
-                    </div>
                     <CardTitle className="group-hover:text-accent transition-colors">
                       {project.title}
                     </CardTitle>
