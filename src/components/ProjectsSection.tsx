@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { ScrollReveal } from "./ScrollReveal";
 
 const projects = [
   {
@@ -73,85 +74,90 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
-
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="section-title mb-4">Featured Projects</h2>
-          <p className="section-subtitle mx-auto">
-            A selection of my recent work in machine learning and AI
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="section-title mb-4">Featured Projects</h2>
+            <p className="section-subtitle mx-auto">
+              A selection of my recent work in machine learning and AI
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Projects Grid */}
-        <motion.div
-          layout
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-          transition={{ duration: 0.4 }}
-        >
-          <AnimatePresence>
-            {visibleProjects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                layout
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ delay: index * 0.05 }}
-              >
-                <Card
-                  className="group hover:-translate-y-2 bg-card border-border cursor-pointer transition-transform"
-                  onClick={() => window.open(project.link, "_blank")}
+        <ScrollReveal delay={0.1}>
+          <motion.div
+            layout
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            transition={{ duration: 0.4 }}
+          >
+            <AnimatePresence>
+              {visibleProjects.map((project, index) => (
+                <motion.div
+                  key={project.title}
+                  layout
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ delay: index * 0.05 }}
                 >
-                  {/* Image wrapper with overlay icon */}
-                  <div className="w-full h-60 overflow-hidden rounded-t-xl relative">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                  <Card
+                    className="group hover:-translate-y-2 bg-card border-border cursor-pointer transition-transform"
+                    onClick={() => window.open(project.link, "_blank")}
+                  >
+                    {/* Image wrapper with overlay icon */}
+                    <div className="w-full h-60 overflow-hidden rounded-t-xl relative">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
 
-                    {/* GitHub overlay bottom-left */}
-                    <div className="absolute bottom-2 left-2 bg-black/70 p-2 rounded-lg">
-                      <Github className="w-5 h-5 text-white" />
+                      {/* GitHub overlay bottom-left */}
+                      <div className="absolute bottom-2 left-2 bg-black/70 p-2 rounded-lg">
+                        <Github className="w-5 h-5 text-white" />
+                      </div>
                     </div>
-                  </div>
 
-                  <CardHeader>
-                    <CardTitle className="group-hover:text-accent transition-colors">
-                      {project.title}
-                    </CardTitle>
-                    <CardDescription className="line-clamp-3">
-                      {project.description}
-                    </CardDescription>
-                  </CardHeader>
+                    <CardHeader>
+                      <CardTitle className="group-hover:text-accent transition-colors">
+                        {project.title}
+                      </CardTitle>
+                      <CardDescription className="line-clamp-3">
+                        {project.description}
+                      </CardDescription>
+                    </CardHeader>
 
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-3 py-1 text-xs font-medium bg-secondary text-secondary-foreground rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+                    <CardContent>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-3 py-1 text-xs font-medium bg-secondary text-secondary-foreground rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        </ScrollReveal>
 
         {/* View More Button */}
-        <div className="text-center mt-10">
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="px-6 py-2 rounded-full bg-accent text-white font-medium hover:bg-accent/90 transition"
-          >
-            {showAll ? "View Less" : "View More"}
-          </button>
-        </div>
+        <ScrollReveal delay={0.2}>
+          <div className="text-center mt-10">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-6 py-2 rounded-full bg-accent text-white font-medium hover:bg-accent/90 transition"
+            >
+              {showAll ? "View Less" : "View More"}
+            </button>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

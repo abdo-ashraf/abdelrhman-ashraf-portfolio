@@ -1,5 +1,7 @@
 import { Brain, BarChart3, Eye, MessageSquare, Bot, Sparkles } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { ScrollReveal } from './ScrollReveal';
+
 const services = [{
   icon: Brain,
   title: 'Deep Learning Solutions',
@@ -25,39 +27,45 @@ const services = [{
   title: 'ML Pipeline Design',
   description: 'End-to-end ML infrastructure with training, deployment, and monitoring.'
 }];
+
 export function ServicesSection() {
-  return <section id="services" className="py-20 md:py-32 bg-secondary/30">
+  return (
+    <section id="services" className="py-20 md:py-32 bg-secondary/30">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          
-          <h2 className="section-title mb-4">AI Model Development</h2>
-          <p className="section-subtitle mx-auto">
-            Custom ML and AI solutions to power your next project
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="section-title mb-4">AI Model Development</h2>
+            <p className="section-subtitle mx-auto">
+              Custom ML and AI solutions to power your next project
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => {
-          const IconComponent = service.icon;
-          return <Card key={service.title} className="group hover:-translate-y-2 bg-card border-border text-center" style={{
-            animationDelay: `${index * 100}ms`
-          }}>
-                <CardHeader>
-                  <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
-                    <IconComponent className="w-7 h-7 text-accent" />
-                  </div>
-                  <CardTitle className="text-lg">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>;
-        })}
+            const IconComponent = service.icon;
+            return (
+              <ScrollReveal key={service.title} delay={index * 0.1}>
+                <Card className="group hover:-translate-y-2 bg-card border-border text-center h-full">
+                  <CardHeader>
+                    <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
+                      <IconComponent className="w-7 h-7 text-accent" />
+                    </div>
+                    <CardTitle className="text-lg">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+            );
+          })}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }
