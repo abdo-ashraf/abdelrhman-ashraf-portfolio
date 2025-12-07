@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { ThemeToggle } from '@/components/ThemeToggle';
-import logo from '@/assets/logo.png';
+import logo from '/assets/logo.png';
 
 const navLinks = [
   { href: '#home', label: 'Home' },
