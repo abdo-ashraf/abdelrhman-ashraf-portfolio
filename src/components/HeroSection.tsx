@@ -28,7 +28,7 @@ export function HeroSection() {
             </h1>
 
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-gradient mb-6">
-              Data Scientist & Machine Learning Engineer
+              Data Scientist & AI Engineer
             </h2>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-xl lg:max-w-lg mb-8 mx-auto lg:mx-0">
@@ -40,10 +40,7 @@ export function HeroSection() {
               <Button variant="hero" size="xl" asChild>
                 <a href="#contact">Get In Touch</a>
               </Button>
-
-              <Button variant="heroOutline" size="xl" asChild>
-                <a href="#projects">View Projects</a>
-              </Button>
+              
             </div>
           </div>
 

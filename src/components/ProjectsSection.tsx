@@ -6,12 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollReveal } from "./ScrollReveal";
 const projects = [{
-  title: "Vulnerability Analyzer Agent",
-  description: "An agent using LangChain to convert unstructured vulnerability text into structured output. Features Dockerized deployment and Google Search pipeline.",
-  tags: ["FastAPI", "LangChain", "LLMs", "Docker"],
-  link: "https://github.com/abdo-ashraf/Vulnerability-Analyzer-Agent",
-  image: "src/assets/projects/vuln-agent.png"
-}, {
   title: "Excel Jobs Data Analytics Dashboard",
   description: "End-to-end data analytics pipeline using Power Query ETL, Power Pivot modeling, DAX, and dynamic dashboards analyzing global data-jobs trends.",
   tags: ["Power Query", "Power Pivot", "DAX", "Analytics"],
@@ -23,6 +17,12 @@ const projects = [{
   tags: ["PyTorch", "RL", "LoRA", "GRPO"],
   link: "https://github.com/abdo-ashraf/Gemma-3-RL-Finetuning",
   image: "src/assets/projects/gemma.png"
+}, {
+  title: "Vulnerability Analyzer Agent",
+  description: "An agent using LangChain to convert unstructured vulnerability text into structured output. Features Dockerized deployment and Google Search pipeline.",
+  tags: ["FastAPI", "LangChain", "LLMs", "Docker"],
+  link: "https://github.com/abdo-ashraf/Vulnerability-Analyzer-Agent",
+  image: "src/assets/projects/vuln-agent.png"
 }, {
   title: "GPU Optimization Framework",
   description: "Framework implementing mixed precision training, Torch Compile, and memory optimization techniques for faster model training.",
@@ -52,7 +52,7 @@ export function ProjectsSection() {
           <div className="text-center mb-16">
             <h2 className="section-title mb-4">Featured Projects</h2>
             <p className="section-subtitle mx-auto">
-              A selection of my recent work in machine learning and AI
+              A selection of my recent work.
             </p>
           </div>
         </ScrollReveal>

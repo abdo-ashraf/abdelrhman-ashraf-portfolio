@@ -35,7 +35,7 @@ export function ServicesSection() {
         {/* Section Header */}
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="section-title mb-4">AI Model Development</h2>
+            <h2 className="section-title mb-4">How I Can Help?!</h2>
             <p className="section-subtitle mx-auto">
               Custom ML and AI solutions to power your next project
             </p>
