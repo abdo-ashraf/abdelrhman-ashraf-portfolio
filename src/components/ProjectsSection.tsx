@@ -15,7 +15,7 @@ const projects = [
   {
     title: "Vulnerability Analyzer Agent",
     description:
-      "FastAPI-based agent using LangChain & LLMs to convert unstructured vulnerability text into structured Pydantic models. Features Dockerized deployment and Google Search enrichment pipeline.",
+      "An agent using LangChain to convert unstructured vulnerability text into structured output. Features Dockerized deployment and Google Search pipeline.",
     tags: ["FastAPI", "LangChain", "LLMs", "Docker"],
     link: "https://github.com/abdo-ashraf/Vulnerability-Analyzer-Agent",
     image: "src/assets/projects/vuln-agent.png",
