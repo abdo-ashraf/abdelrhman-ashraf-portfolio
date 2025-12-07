@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
+import { ScrollReveal } from './ScrollReveal';
 
 const contactInfo = [
   {
@@ -60,120 +61,126 @@ export function ContactSection() {
     <section id="contact" className="py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="section-title mb-4">Get In Touch</h2>
-          <p className="section-subtitle mx-auto">
-            Have a project in mind? Let's discuss how I can help.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="section-title mb-4">Get In Touch</h2>
+            <p className="section-subtitle mx-auto">
+              Have a project in mind? Let's discuss how I can help.
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Info */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="font-display text-xl font-semibold mb-6">
-                Contact Information
-              </h3>
-              <div className="space-y-4">
-                {contactInfo.map((info) => {
-                  const IconComponent = info.icon;
-                  const content = (
-                    <div className="flex items-center gap-4 p-4 bg-card rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 group">
-                      <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                        <IconComponent className="w-5 h-5 text-accent" />
+          <ScrollReveal delay={0.1} direction="left">
+            <div className="space-y-8">
+              <div>
+                <h3 className="font-display text-xl font-semibold mb-6">
+                  Contact Information
+                </h3>
+                <div className="space-y-4">
+                  {contactInfo.map((info) => {
+                    const IconComponent = info.icon;
+                    const content = (
+                      <div className="flex items-center gap-4 p-4 bg-card rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 group">
+                        <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                          <IconComponent className="w-5 h-5 text-accent" />
+                        </div>
+                        <div>
+                          <p className="text-sm text-muted-foreground">{info.label}</p>
+                          <p className="font-medium text-foreground">{info.value}</p>
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">{info.label}</p>
-                        <p className="font-medium text-foreground">{info.value}</p>
-                      </div>
-                    </div>
-                  );
+                    );
 
-                  return info.href ? (
-                    <a
-                      key={info.label}
-                      href={info.href}
-                      target={info.href.startsWith('http') ? '_blank' : undefined}
-                      rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="block"
-                    >
-                      {content}
-                    </a>
-                  ) : (
-                    <div key={info.label}>{content}</div>
-                  );
-                })}
+                    return info.href ? (
+                      <a
+                        key={info.label}
+                        href={info.href}
+                        target={info.href.startsWith('http') ? '_blank' : undefined}
+                        rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        className="block"
+                      >
+                        {content}
+                      </a>
+                    ) : (
+                      <div key={info.label}>{content}</div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Contact Form */}
-          <div className="bg-card rounded-xl p-6 md:p-8 shadow-card">
-            <h3 className="font-display text-xl font-semibold mb-6">
-              Send a Message
-            </h3>
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                  Your Name
-                </label>
-                <Input
-                  id="name"
-                  type="text"
-                  placeholder="John Doe"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                  Email Address
-                </label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="john@example.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Your Message
-                </label>
-                <Textarea
-                  id="message"
-                  placeholder="Tell me about your project..."
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  required
-                />
-              </div>
-              <Button 
-                type="submit" 
-                variant="hero" 
-                size="lg" 
-                className="w-full"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  'Sending...'
-                ) : isSubmitted ? (
-                  <>
-                    <CheckCircle className="w-5 h-5 mr-2" />
-                    Message Sent!
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5 mr-2" />
-                    Send Message
-                  </>
-                )}
-              </Button>
-            </form>
-          </div>
+          <ScrollReveal delay={0.2} direction="right">
+            <div className="bg-card rounded-xl p-6 md:p-8 shadow-card">
+              <h3 className="font-display text-xl font-semibold mb-6">
+                Send a Message
+              </h3>
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    Your Name
+                  </label>
+                  <Input
+                    id="name"
+                    type="text"
+                    placeholder="John Doe"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    Email Address
+                  </label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="john@example.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                    Your Message
+                  </label>
+                  <Textarea
+                    id="message"
+                    placeholder="Tell me about your project..."
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    required
+                  />
+                </div>
+                <Button 
+                  type="submit" 
+                  variant="hero" 
+                  size="lg" 
+                  className="w-full"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    'Sending...'
+                  ) : isSubmitted ? (
+                    <>
+                      <CheckCircle className="w-5 h-5 mr-2" />
+                      Message Sent!
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5 mr-2" />
+                      Send Message
+                    </>
+                  )}
+                </Button>
+              </form>
+            </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
