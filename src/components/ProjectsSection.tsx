@@ -10,37 +10,37 @@ const projects = [{
   description: "End-to-end data analytics pipeline using Power Query ETL, Power Pivot modeling, DAX, and dynamic dashboards analyzing global data-jobs trends.",
   tags: ["Power Query", "Power Pivot", "DAX", "Analytics"],
   link: "https://github.com/abdo-ashraf/Excel-Jobs-Data-Analytics-project",
-  image: "src/assets/projects/excel-dashboard.png"
+  image: "/assets/projects/excel-dashboard.png"
 }, {
   title: "Gemma-3 RL Fine-Tuning Pipeline",
   description: "Reinforcement learning fine-tuning pipeline for Gemma-3-1B using GRPO & LoRA, optimized for memory efficiency and performance.",
   tags: ["PyTorch", "RL", "LoRA", "GRPO"],
   link: "https://github.com/abdo-ashraf/Gemma-3-RL-Finetuning",
-  image: "src/assets/projects/gemma.png"
+  image: "/assets/projects/gemma.png"
 }, {
   title: "Vulnerability Analyzer Agent",
   description: "An agent using LangChain to convert unstructured vulnerability text into structured output. Features Dockerized deployment and Google Search pipeline.",
   tags: ["FastAPI", "LangChain", "LLMs", "Docker"],
   link: "https://github.com/abdo-ashraf/Vulnerability-Analyzer-Agent",
-  image: "src/assets/projects/vuln-agent.png"
+  image: "/assets/projects/vuln-agent.png"
 }, {
   title: "GPU Optimization Framework",
   description: "Framework implementing mixed precision training, Torch Compile, and memory optimization techniques for faster model training.",
   tags: ["PyTorch", "CUDA", "Optimization"],
   link: "https://github.com/abdo-ashraf/Optimizing-GPU-Utilization-at-Training",
-  image: "src/assets/projects/gpu-opt.png"
+  image: "/assets/projects/gpu-opt.png"
 }, {
   title: "NMT Multi-Model Training",
   description: "Neural Machine Translation framework supporting multiple model architectures with unified training pipeline and evaluation metrics.",
   tags: ["NLP", "Transformers", "PyTorch"],
   link: "https://github.com/abdo-ashraf/NMT-MultiModel-Training-Framework",
-  image: "src/assets/projects/nmt.png"
+  image: "/assets/projects/nmt.png"
 }, {
   title: "Image Classification & Localization",
   description: "Deep learning model for simultaneous image classification and object localization with custom loss functions and augmentation strategies.",
   tags: ["Computer Vision", "CNN", "TensorFlow"],
   link: "http://www.github.com/abdo-ashraf/Image-Classification-with-localization",
-  image: "src/assets/projects/localization.png"
+  image: "/assets/projects/localization.png"
 }];
 export function ProjectsSection() {
   const [showAll, setShowAll] = useState(false);
