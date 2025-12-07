@@ -1,6 +1,6 @@
 import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import profilePhoto from '@/assets/profile-photo.jpg';
+import profilePhoto from '/assets/profile-photo.jpg';
 
 export function HeroSection() {
   return (
