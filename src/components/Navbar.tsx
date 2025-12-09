@@ -81,7 +81,7 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-2">
           <ThemeToggle />
           <Button variant="hero" size="sm" asChild>
-            <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>Let's work together!</a>
+            <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a>
           </Button>
         </div>
 
@@ -119,7 +119,7 @@ export function Navbar() {
           ))}
           <li className="pt-2">
             <Button variant="hero" className="w-full" asChild>
-              <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>Hire Me</a>
+              <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a>
             </Button>
           </li>
         </ul>
