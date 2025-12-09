@@ -5,26 +5,20 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import logo from '/assets/logo.png';
-const navLinks = [{
-  href: '#home',
-  label: 'Home'
-}, {
-  href: '#about',
-  label: 'About'
-}, {
-  href: '#projects',
-  label: 'Projects'
-}, {
-  href: '#services',
-  label: 'Services'
-}, {
-  href: '#contact',
-  label: 'Contact'
-}];
+
+const navLinks = [
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#services', label: 'Services' },
+  { href: '#contact', label: 'Contact' },
+];
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -32,6 +26,19 @@ export function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (isMenuOpen && !target.closest('.dropdown-menu-container')) {
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [isMenuOpen]);
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (location.pathname !== '/' && href.startsWith('#')) {
       e.preventDefault();
@@ -42,59 +49,84 @@ export function Navbar() {
       e.preventDefault();
       const element = document.querySelector(href);
       if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth'
-        });
+        element.scrollIntoView({ behavior: 'smooth' });
       }
     }
-    setIsMobileMenuOpen(false);
+    setIsMenuOpen(false);
   };
-  return <header className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-500', isScrolled ? 'bg-card/80 backdrop-blur-lg border-b border-border shadow-soft' : 'bg-transparent')}>
+
+  return (
+    <header
+      className={cn(
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
+        isScrolled
+          ? 'bg-card/80 backdrop-blur-lg border-b border-border shadow-soft'
+          : 'bg-transparent'
+      )}
+    >
       <nav className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
-        {/* Logo redirects user */}
-        <a href="#home" onClick={e => handleNavClick(e, '#home')} className="flex items-center gap-2 cursor-pointer">
-          <img src={logo} alt="Logo" className="h-20 w-20" />
+        {/* Dropdown Menu Button - Top Left */}
+        <div className="dropdown-menu-container relative">
+          <button
+            className="p-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsMenuOpen(!isMenuOpen);
+            }}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
+          {/* Dropdown Menu */}
+          <div
+            className={cn(
+              'absolute top-full left-0 mt-2 w-56 bg-card border border-border rounded-xl shadow-lg transition-all duration-300 origin-top-left z-50',
+              isMenuOpen
+                ? 'opacity-100 scale-100 pointer-events-auto'
+                : 'opacity-0 scale-95 pointer-events-none'
+            )}
+          >
+            <ul className="flex flex-col p-4 gap-1">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="block py-3 px-4 text-foreground hover:bg-secondary rounded-lg transition-colors font-medium"
+                    onClick={(e) => handleNavClick(e, link.href)}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+              <li className="border-t border-border mt-2 pt-3">
+                <a
+                  href="https://drive.google.com/drive/folders/11jma4YwgByDFfDdNzRF9AzpQecYq0GYM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block py-3 px-4 text-foreground hover:bg-secondary rounded-lg transition-colors font-medium"
+                >
+                  My Resume
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Logo - Center */}
+        <a
+          href="#home"
+          onClick={(e) => handleNavClick(e, '#home')}
+          className="flex items-center gap-2 cursor-pointer absolute left-1/2 -translate-x-1/2"
+        >
+          <img src={logo} alt="Logo" className="h-16 w-16" />
         </a>
 
-        {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map(link => <li key={link.href}>
-              <a href={link.href} onClick={e => handleNavClick(e, link.href)} className="nav-link text-sm font-medium">
-                {link.label}
-              </a>
-            </li>)}
-        </ul>
-
-        <div className="hidden md:flex items-center gap-2">
+        {/* Theme Toggle - Right */}
+        <div className="flex items-center">
           <ThemeToggle />
-          <Button variant="hero" size="sm" asChild>
-            <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/drive/folders/11jma4YwgByDFfDdNzRF9AzpQecYq0GYM">My Resume</a>
-          </Button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center gap-2">
-          <ThemeToggle />
-          <button className="p-2 text-foreground" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Toggle menu">
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
       </nav>
-
-      {/* Mobile Menu */}
-      <div className={cn('md:hidden absolute top-16 left-0 right-0 bg-card border-b border-border transition-all duration-300 overflow-hidden', isMobileMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0')}>
-        <ul className="flex flex-col p-4 gap-2">
-          {navLinks.map(link => <li key={link.href}>
-              <a href={link.href} className="block py-3 px-4 text-foreground hover:bg-secondary rounded-lg transition-colors" onClick={e => handleNavClick(e, link.href)}>
-                {link.label}
-              </a>
-            </li>)}
-          <li className="pt-2">
-            <Button variant="hero" className="w-full" asChild>
-              <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a>
-            </Button>
-          </li>
-        </ul>
-      </div>
-    </header>;
+    </header>
+  );
 }
