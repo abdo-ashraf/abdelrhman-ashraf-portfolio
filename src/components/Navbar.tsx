@@ -68,7 +68,7 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-2">
           <ThemeToggle />
           <Button variant="hero" size="sm" asChild>
-            <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/drive/folders/11jma4YwgByDFfDdNzRF9AzpQecYq0GYM?usp=drive_link">My Resume</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/drive/folders/11jma4YwgByDFfDdNzRF9AzpQecYq0GYM">My Resume</a>
           </Button>
         </div>
 
