@@ -65,66 +65,65 @@ export function Navbar() {
       )}
     >
       <nav className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
-        {/* Dropdown Menu Button - Top Left */}
-        <div className="dropdown-menu-container relative">
-          <button
-            className="p-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
-            onClick={(e) => {
-              e.stopPropagation();
-              setIsMenuOpen(!isMenuOpen);
-            }}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-
-          {/* Dropdown Menu */}
-          <div
-            className={cn(
-              'absolute top-full left-0 mt-2 w-56 bg-card border border-border rounded-xl shadow-lg transition-all duration-300 origin-top-left z-50',
-              isMenuOpen
-                ? 'opacity-100 scale-100 pointer-events-auto'
-                : 'opacity-0 scale-95 pointer-events-none'
-            )}
-          >
-            <ul className="flex flex-col p-4 gap-1">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="block py-3 px-4 text-foreground hover:bg-secondary rounded-lg transition-colors font-medium"
-                    onClick={(e) => handleNavClick(e, link.href)}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-              <li className="border-t border-border mt-2 pt-3">
-                <a
-                  href="https://drive.google.com/drive/folders/11jma4YwgByDFfDdNzRF9AzpQecYq0GYM"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block py-3 px-4 text-foreground hover:bg-secondary rounded-lg transition-colors font-medium"
-                >
-                  My Resume
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Logo - Center */}
+        {/* Logo - Left */}
         <a
           href="#home"
           onClick={(e) => handleNavClick(e, '#home')}
-          className="flex items-center gap-2 cursor-pointer absolute left-1/2 -translate-x-1/2"
+          className="flex items-center gap-2 cursor-pointer"
         >
           <img src={logo} alt="Logo" className="h-16 w-16" />
         </a>
 
-        {/* Theme Toggle - Right */}
-        <div className="flex items-center">
+        {/* Theme Toggle & Menu - Right */}
+        <div className="flex items-center gap-2">
           <ThemeToggle />
+          
+          <div className="dropdown-menu-container relative">
+            <button
+              className="p-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsMenuOpen(!isMenuOpen);
+              }}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+
+            {/* Dropdown Menu */}
+            <div
+              className={cn(
+                'absolute top-full right-0 mt-2 w-56 bg-card border border-border rounded-xl shadow-lg transition-all duration-300 origin-top-right z-50',
+                isMenuOpen
+                  ? 'opacity-100 scale-100 pointer-events-auto'
+                  : 'opacity-0 scale-95 pointer-events-none'
+              )}
+            >
+              <ul className="flex flex-col p-4 gap-1">
+                {navLinks.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      className="block py-3 px-4 text-foreground hover:bg-secondary rounded-lg transition-colors font-medium"
+                      onClick={(e) => handleNavClick(e, link.href)}
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+                <li className="border-t border-border mt-2 pt-3">
+                  <a
+                    href="https://drive.google.com/drive/folders/11jma4YwgByDFfDdNzRF9AzpQecYq0GYM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block py-3 px-4 text-foreground hover:bg-secondary rounded-lg transition-colors font-medium"
+                  >
+                    My Resume
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
