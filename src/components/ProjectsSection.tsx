@@ -18,9 +18,15 @@ const projects = [{
   link: "https://github.com/abdo-ashraf/Gemma-3-RL-Finetuning",
   image: "/assets/projects/gemma.png"
 }, {
-  title: "Vulnerability Analyzer Agent",
+  title: "SQL Sales Analytics Practice",
+  description: "A SQL analytics project using a Contoso dataset. Covers intermediate and advanced SQL concept queries executed in Jupyter Notebook.",
+  tags: ["SQL", "PostgreSQL", "Data Analytics", "Jupyter"],
+  link: "https://github.com/abdo-ashraf/postgresql-practicing-queries",
+  image: "/assets/projects/sql-analytics.png"
+}, {
+  title: "Postgresql Practicing Queries",
   description: "An agent using LangChain to convert unstructured vulnerability text into structured output. Features Dockerized deployment and Google Search pipeline.",
-  tags: ["FastAPI", "LangChain", "LLMs", "Docker"],
+  tags: ["", "LangChain", "LLMs", "Docker"],
   link: "https://github.com/abdo-ashraf/Vulnerability-Analyzer-Agent",
   image: "/assets/projects/vuln-agent.png"
 }, {
