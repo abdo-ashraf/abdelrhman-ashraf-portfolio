@@ -12,129 +12,17 @@ interface Course {
   link: string;
   platform: string;
   icon: string | null;
-  status?: 'ongoing' | 'planned';
+  status?: 'ongoing' | 'planned' | 'completed';
 }
 
 const courses: Course[] = [
   {
-    title: "Machine Learning Specialization",
-    instructor: "Andrew Ng",
-    link: "https://www.deeplearning.ai/courses/machine-learning-specialization/",
-    platform: "DeepLearning.AI",
-    icon: "https://cdn.brandfetch.io/idcuOol42D/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "Machine Learning & Data Science Diploma",
-    instructor: "Mohammed Agoor",
-    link: "https://www.udemy.com/course/machine-learning-diploma-arabic/",
-    platform: "Udemy",
-    icon: "https://cdn.brandfetch.io/idTqV2BNgX/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "Machine Learning Practical: 6 Real-World Applications",
-    instructor: "SuperDataScience Team, Rony Sulca, Ligency",
-    link: "https://www.udemy.com/course/machine-learning-practical/",
-    platform: "Udemy",
-    icon: "https://cdn.brandfetch.io/idTqV2BNgX/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "Deep Learning Specialization",
-    instructor: "Andrew Ng",
-    link: "https://www.deeplearning.ai/courses/deep-learning-specialization/",
-    platform: "DeepLearning.AI",
-    icon: "https://cdn.brandfetch.io/idcuOol42D/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "Machine Learning Real World projects in Python",
-    instructor: "Shan Singh",
-    link: "https://www.udemy.com/course/machine-learning-real-world-projects-in-python/",
-    platform: "Udemy",
-    icon: "https://cdn.brandfetch.io/idTqV2BNgX/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "Deep Learning Fall 2024",
-    instructor: "Tamer Elsayed",
-    link: "https://www.youtube.com/playlist?list=PLRdABJkXXytCz19PsZ1PCQBKoZGV069k3",
-    platform: "YouTube",
-    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "Neural Networks: Zero to Hero",
-    instructor: "Andrej Karpathy",
-    link: "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ",
-    platform: "YouTube",
-    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "Open Source Models with Hugging Face",
-    instructor: "Maria Khalusova, Marc Sun, Younes Belkada",
-    link: "https://www.deeplearning.ai/short-courses/open-source-models-hugging-face/",
-    platform: "DeepLearning.AI",
-    icon: "https://cdn.brandfetch.io/idcuOol42D/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "Prompt Engineering",
-    instructor: "Abu Bakr Soliman",
-    link: "https://www.youtube.com/playlist?list=PLvLvlVqNQGHDNUshQJBWWCIRGgC0PN7VL",
-    platform: "YouTube",
-    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "UMass CS685: Advanced Natural Language Processing (Spring 2024)",
-    instructor: "Mohit Iyyer",
-    link: "https://www.youtube.com/playlist?list=PLWnsVgP6CzafDszSy-njjdqnliv5qT0EW",
-    platform: "YouTube",
-    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "Microsoft Azure Fundamentals (AZ-900) Full Course",
-    instructor: "Adam Marczak",
-    link: "https://www.youtube.com/playlist?list=PLGjZwEtPN7j-Q59JYso3L4_yoCjj2syrM",
-    platform: "YouTube",
-    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "AWS Certified Cloud Practitioner CLF02",
-    instructor: "Ahmed Elfakharany",
-    link: "https://www.youtube.com/playlist?list=PLluZGtIpwF_B6IHB6q1pG8AJAIvpJHNIH",
-    platform: "YouTube",
-    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "Ultimate AWS Certified Solutions Architect Associate",
-    instructor: "Stephane Maarek",
-    link: "https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/",
-    platform: "Udemy",
-    icon: "https://cdn.brandfetch.io/idTqV2BNgX/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "Machine Learning in Production",
-    instructor: "Andrew Ng",
-    link: "https://www.deeplearning.ai/courses/machine-learning-in-production/",
-    platform: "DeepLearning.AI",
-    icon: "https://cdn.brandfetch.io/idcuOol42D/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "Master Probability and Statistics for AI&DS in 9 Days",
-    instructor: "Hatem Elattarai",
-    link: "https://www.youtube.com/playlist?list=PLJM7jJIw2GC2Ihr__bRSeMxzsiFMZEsx7",
-    platform: "YouTube",
-    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "Data Analyst Bootcamp: Zero to Hero",
-    instructor: "Luke Barousse",
-    link: "https://www.youtube.com/playlist?list=PL_CkpxkuPiT-RJ7zBfHVWwgltEWIVwrwb",
-    platform: "YouTube",
-    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
-  },
-  {
-    title: "mini-RAG | From notebooks to PRODUCTION",
-    instructor: "Abu Bakr Soliman",
-    link: "https://www.youtube.com/playlist?list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj",
-    platform: "YouTube",
-    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
-    status: 'ongoing'
+    title: "Machine Learning Systems Book",
+    instructor: "Vijay Janapa Reddi",
+    link: "https://mlsysbook.ai/",
+    platform: "Machine Learning Systems",
+    icon: null,
+    status: 'planned'
   },
   {
     title: "Hands-On Machine Learning with Scikit-Learn and PyTorch",
@@ -145,12 +33,140 @@ const courses: Course[] = [
     status: 'planned'
   },
   {
-    title: "Machine Learning Systems Book",
-    instructor: "Vijay Janapa Reddi",
-    link: "https://mlsysbook.ai/",
-    platform: "Machine Learning Systems",
-    icon: null,
-    status: 'planned'
+    title: "mini-RAG | From notebooks to PRODUCTION",
+    instructor: "Abu Bakr Soliman",
+    link: "https://www.youtube.com/playlist?list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj",
+    platform: "YouTube",
+    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'ongoing'
+  },
+  {
+    title: "Data Analyst Bootcamp: Zero to Hero",
+    instructor: "Luke Barousse",
+    link: "https://www.youtube.com/playlist?list=PL_CkpxkuPiT-RJ7zBfHVWwgltEWIVwrwb",
+    platform: "YouTube",
+    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
+  },
+  {
+    title: "Master Probability and Statistics for AI&DS in 9 Days",
+    instructor: "Hatem Elattarai",
+    link: "https://www.youtube.com/playlist?list=PLJM7jJIw2GC2Ihr__bRSeMxzsiFMZEsx7",
+    platform: "YouTube",
+    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
+  },
+  {
+    title: "Machine Learning in Production",
+    instructor: "Andrew Ng",
+    link: "https://www.deeplearning.ai/courses/machine-learning-in-production/",
+    platform: "DeepLearning.AI",
+    icon: "https://cdn.brandfetch.io/idcuOol42D/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
+  },
+  {
+    title: "Ultimate AWS Certified Solutions Architect Associate",
+    instructor: "Stephane Maarek",
+    link: "https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/",
+    platform: "Udemy",
+    icon: "https://cdn.brandfetch.io/idTqV2BNgX/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
+  },
+  {
+    title: "AWS Certified Cloud Practitioner CLF02",
+    instructor: "Ahmed Elfakharany",
+    link: "https://www.youtube.com/playlist?list=PLluZGtIpwF_B6IHB6q1pG8AJAIvpJHNIH",
+    platform: "YouTube",
+    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
+  },
+  {
+    title: "Microsoft Azure Fundamentals (AZ-900) Full Course",
+    instructor: "Adam Marczak",
+    link: "https://www.youtube.com/playlist?list=PLGjZwEtPN7j-Q59JYso3L4_yoCjj2syrM",
+    platform: "YouTube",
+    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
+  },
+  {
+    title: "UMass CS685: Advanced Natural Language Processing (Spring 2024)",
+    instructor: "Mohit Iyyer",
+    link: "https://www.youtube.com/playlist?list=PLWnsVgP6CzafDszSy-njjdqnliv5qT0EW",
+    platform: "YouTube",
+    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
+  },
+  {
+    title: "Prompt Engineering",
+    instructor: "Abu Bakr Soliman",
+    link: "https://www.youtube.com/playlist?list=PLvLvlVqNQGHDNUshQJBWWCIRGgC0PN7VL",
+    platform: "YouTube",
+    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
+  },
+  {
+    title: "Open Source Models with Hugging Face",
+    instructor: "Maria Khalusova, Marc Sun, Younes Belkada",
+    link: "https://www.deeplearning.ai/short-courses/open-source-models-hugging-face/",
+    platform: "DeepLearning.AI",
+    icon: "https://cdn.brandfetch.io/idcuOol42D/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
+  },
+  {
+    title: "Neural Networks: Zero to Hero",
+    instructor: "Andrej Karpathy",
+    link: "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ",
+    platform: "YouTube",
+    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
+  },
+  {
+    title: "Deep Learning Fall 2024",
+    instructor: "Tamer Elsayed",
+    link: "https://www.youtube.com/playlist?list=PLRdABJkXXytCz19PsZ1PCQBKoZGV069k3",
+    platform: "YouTube",
+    icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
+  },
+  {
+    title: "Machine Learning Real World projects in Python",
+    instructor: "Shan Singh",
+    link: "https://www.udemy.com/course/machine-learning-real-world-projects-in-python/",
+    platform: "Udemy",
+    icon: "https://cdn.brandfetch.io/idTqV2BNgX/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
+  },
+  {
+    title: "Deep Learning Specialization",
+    instructor: "Andrew Ng",
+    link: "https://www.deeplearning.ai/courses/deep-learning-specialization/",
+    platform: "DeepLearning.AI",
+    icon: "https://cdn.brandfetch.io/idcuOol42D/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
+  },
+  {
+    title: "Machine Learning Practical: 6 Real-World Applications",
+    instructor: "SuperDataScience Team, Rony Sulca, Ligency",
+    link: "https://www.udemy.com/course/machine-learning-practical/",
+    platform: "Udemy",
+    icon: "https://cdn.brandfetch.io/idTqV2BNgX/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
+  },
+  {
+    title: "Machine Learning & Data Science Diploma",
+    instructor: "Mohammed Agoor",
+    link: "https://www.udemy.com/course/machine-learning-diploma-arabic/",
+    platform: "Udemy",
+    icon: "https://cdn.brandfetch.io/idTqV2BNgX/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
+  },
+  {
+    title: "Machine Learning Specialization",
+    instructor: "Andrew Ng",
+    link: "https://www.deeplearning.ai/courses/machine-learning-specialization/",
+    platform: "DeepLearning.AI",
+    icon: "https://cdn.brandfetch.io/idcuOol42D/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'completed'
   }
 ];
 
@@ -230,6 +246,11 @@ export function LearningJourneySection() {
                           {course.status === 'planned' && (
                             <Badge className="text-xs bg-blue-500/20 text-blue-600 dark:text-blue-400 border-blue-500/30">
                               Planned
+                            </Badge>
+                          )}
+                          {course.status === 'completed' && (
+                            <Badge className="text-xs bg-green-500/20 text-green-600 dark:text-green-400 border-green-500/30">
+                              Completed
                             </Badge>
                           )}
                         </div>
