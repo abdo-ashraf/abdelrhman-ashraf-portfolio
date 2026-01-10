@@ -25,19 +25,19 @@ const courses: Course[] = [
     status: 'planned'
   },
   {
-    title: "Hands-On Machine Learning with Scikit-Learn and PyTorch",
-    instructor: "Aurélien Géron",
-    link: "https://www.oreilly.com/library/view/hands-on-machine-learning/9798341607972/",
-    platform: "O'Reilly",
-    icon: "https://cdn.brandfetch.io/idWxFPwq-L/w/200/h/200/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B",
-    status: 'planned'
-  },
-  {
     title: "mini-RAG | From notebooks to PRODUCTION",
     instructor: "Abu Bakr Soliman",
     link: "https://www.youtube.com/playlist?list=PLvLvlVqNQGHCUR2p0b8a0QpVjDUg50wQj",
     platform: "YouTube",
     icon: "https://cdn.brandfetch.io/idVfYwcuQz/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    status: 'planned'
+  },
+  {
+    title: "Hands-On Machine Learning with Scikit-Learn and PyTorch",
+    instructor: "Aurélien Géron",
+    link: "https://www.oreilly.com/library/view/hands-on-machine-learning/9798341607972/",
+    platform: "O'Reilly",
+    icon: "https://cdn.brandfetch.io/idWxFPwq-L/w/200/h/200/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B",
     status: 'ongoing'
   },
   {
