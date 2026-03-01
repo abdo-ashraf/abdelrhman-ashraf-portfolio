@@ -206,6 +206,21 @@ export function AboutSection() {
             </div>
           </ScrollReveal>
 
+          {/* INTERESTS */}
+          <ScrollReveal delay={0.4}>
+            <div className="bg-card rounded-xl p-6 md:p-8 shadow-card">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                  <Globe className="w-5 h-5 text-accent" />
+                </div>
+                <h3 className="font-display text-xl font-semibold">Interests</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Stock Trading, Digital Marketing, Chess, Reading, and Cooking — reflecting my passion for strategy, data-driven thinking, continuous learning, and creativity.
+              </p>
+            </div>
+          </ScrollReveal>
+
         </div>
       </div>
     </section>);
