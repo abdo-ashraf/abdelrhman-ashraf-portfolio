@@ -35,7 +35,8 @@ export function ServicesSection() {
         {/* Section Header */}
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="section-title mb-4">How I Can Help?!</h2>
+            <h2 className="section-title mb-4">How Can I Help?!
+            </h2>
             <p className="section-subtitle mx-auto">
               Custom ML and AI solutions to power your next project
             </p>
@@ -44,10 +45,9 @@ export function ServicesSection() {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <ScrollReveal key={service.title} delay={index * 0.1}>
+          {services.map((service, index) => {const IconComponent = service.icon;
+              return (
+                <ScrollReveal key={service.title} delay={index * 0.1}>
                 <Card className="group hover:-translate-y-2 bg-card border-border text-center h-full">
                   <CardHeader>
                     <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
@@ -61,11 +61,11 @@ export function ServicesSection() {
                     </CardDescription>
                   </CardContent>
                 </Card>
-              </ScrollReveal>
-            );
-          })}
+              </ScrollReveal>);
+
+            })}
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
