@@ -97,9 +97,6 @@ export function AboutSection() {
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="section-title mb-4">About Me</h2>
-            <p className="section-subtitle mx-auto">
-              Building intelligent systems that make a difference
-            </p>
           </div>
         </ScrollReveal>
 
