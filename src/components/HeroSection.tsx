@@ -6,8 +6,8 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center relative overflow-hidden pt-20"
-    >
+      className="min-h-screen flex items-center relative overflow-hidden pt-20">
+
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-3xl blur-3xl animate-float" />
@@ -32,8 +32,8 @@ export function HeroSection() {
             </h2>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-xl lg:max-w-lg mb-8 mx-auto lg:mx-0">
-              Passionate about building intelligent systems, exploring AI agents, 
-              and developing end-to-end ML solutions that solve real-world problems.
+
+
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
@@ -50,8 +50,8 @@ export function HeroSection() {
               <img
                 src={profilePhoto}
                 alt="Abdelrhman Ashraf - Data Scientist & ML Engineer"
-                className="w-full h-full object-cover"
-              />
+                className="w-full h-full object-cover" />
+
             </div>
           </div>
         </div>
@@ -63,6 +63,6 @@ export function HeroSection() {
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
