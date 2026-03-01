@@ -32,8 +32,7 @@ export function HeroSection() {
             </h2>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-xl lg:max-w-lg mb-8 mx-auto lg:mx-0">
-
-
+              Building intelligent systems that make a difference
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
