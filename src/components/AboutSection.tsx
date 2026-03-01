@@ -152,7 +152,7 @@ export function AboutSection() {
 
               {/* SKILLS (LEFT) */}
               <div className="bg-card rounded-xl p-6 md:p-8 shadow-card">
-                <h3 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">
+                <h3 className="font-display text-xl font-semibold mb-6 flex items-center gap-3">Tech Arsenal
                   <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
                     <Brain className="w-5 h-5 text-accent" />
                   </div>
