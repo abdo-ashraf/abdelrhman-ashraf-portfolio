@@ -63,7 +63,7 @@ const education = [
 ];
 
 const skillsData = {
-  programmingLanguages: ['Python', 'C'],
+  programmingLanguages: ['Python', 'C', 'Java', 'JavaScript'],
   librariesAndFrameworks: [
     'FastAPI',
     'LangChain',
@@ -72,20 +72,18 @@ const skillsData = {
     'TensorFlow',
     'Streamlit',
     'NumPy',
-    'Pandas',
-    'Matplotlib',
     'scikit-learn',
     'Transformers',
     'Selenium',
   ],
   toolsAndPlatforms: [
-    'Excel (Power Query, Power Pivot)',
     'Amazon Web Services (AWS)',
     'SQL',
     'NoSQL (MongoDB)',
     'Vector Databases',
     'Git',
     'Docker',
+    'Excel (Power Query, Power Pivot)',
     'Vibe coding',
   ],
 };
