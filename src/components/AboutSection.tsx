@@ -107,7 +107,7 @@ export function AboutSection() {
         <ScrollReveal delay={0.1}>
           <div className="max-w-3xl mx-auto mb-16">
             <p className="text-lg text-muted-foreground leading-relaxed text-center">
-
+              I'm a Data Scientist and AI Engineer passionate about building intelligent systems and scalable end-to-end ML solutions that solve real-world problems. I specialize in deep learning, LLMs, and AI agents, with a focus on designing and deploying production-ready machine learning pipelines.
             </p>
           </div>
         </ScrollReveal>
