@@ -216,7 +216,7 @@ export function AboutSection() {
                 <h3 className="font-display text-xl font-semibold">Interests</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                Stock Trading, Digital Marketing, Chess, Reading, and Cooking — reflecting my passion for strategy, data-driven thinking, continuous learning, and creativity.
+                Stock Trading, Digital Marketing, Chess, Reading, and Cooking; reflecting my passion for strategy, data-driven thinking, continuous learning, and creativity.
               </p>
             </div>
           </ScrollReveal>
