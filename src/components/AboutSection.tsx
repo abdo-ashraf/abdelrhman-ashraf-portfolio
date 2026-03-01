@@ -2,90 +2,90 @@ import { Code2, Brain, Database, Cloud, Server, BarChart3, GraduationCap, Briefc
 import { ScrollReveal } from './ScrollReveal';
 
 const experience = [
-  {
-    title: 'IT Support',
-    company: 'Alexandria Construction Company (TMG)',
-    period: 'Sep 2025 – Present',
-    description:
-      'Provided technical support for company staff by troubleshooting hardware, software, and network issues. Maintained operating systems, applications, and security tools while monitoring system performance and ensuring stable network connectivity. Assisted employees with account setup, access permissions, and system updates.',
-    skills: [
-      'Technical Support',
-      'Troubleshooting'
-    ],
-  },
-  {
-    title: 'Machine Learning Engineer Intern',
-    company: 'Homains',
-    period: 'Dec 2024 – Feb 2025',
-    description:
-      'Developed an end-to-end speech-to-text system for the Egyptian dialect using Whisper. Designed a CI/CD fine-tuning pipeline with ZenML, Hugging Face, and MLflow for continuous training and experiment tracking. Optimized the model using LoRA and processed 15 hours of audio for evaluation, achieving a 29% WER improvement.',
-    skills: [
-      'Speech-to-Text',
-      'Whisper',
-      'ZenML',
-      'Hugging Face',
-      'MLflow',
-      'LoRA',
-      'Deep Learning',
-      'Model Optimization',
-      'Audio Processing',
-    ],
-  },
-  {
-    title: 'Graduation Project',
-    company: 'Fixed Solutions',
-    period: 'Oct 2023 – Jun 2024',
-    description:
-      'Developed a real-time malware detection system using deep learning. Implemented two advanced neural networks: one for analyzing system call sequences and another for detecting malicious patterns from byte-level file images. Achieved strong performance including 81.14% accuracy and 65.32% precision on Zero-day malware, supported by a custom Selenium-based dataset scraper.',
-    skills: [
-      'Deep Learning',
-      'Malware Detection',
-      'Computer Vision',
-      'Byte Image Processing',
-      'Python',
-      'Tensorflow',
-      'Selenium'
-    ],
-  },
-];
+{
+  title: 'IT Support',
+  company: 'Alexandria Construction Company (TMG)',
+  period: 'Sep 2025 – Present',
+  description:
+  'Provided technical support for company staff by troubleshooting hardware, software, and network issues. Maintained operating systems, applications, and security tools while monitoring system performance and ensuring stable network connectivity. Assisted employees with account setup, access permissions, and system updates.',
+  skills: [
+  'Technical Support',
+  'Troubleshooting']
+
+},
+{
+  title: 'Machine Learning Engineer Intern',
+  company: 'Homains',
+  period: 'Dec 2024 – Feb 2025',
+  description:
+  'Developed an end-to-end speech-to-text system for the Egyptian dialect using Whisper. Designed a CI/CD fine-tuning pipeline with ZenML, Hugging Face, and MLflow for continuous training and experiment tracking. Optimized the model using LoRA and processed 15 hours of audio for evaluation, achieving a 29% WER improvement.',
+  skills: [
+  'Speech-to-Text',
+  'Whisper',
+  'ZenML',
+  'Hugging Face',
+  'MLflow',
+  'LoRA',
+  'Deep Learning',
+  'Model Optimization',
+  'Audio Processing']
+
+},
+{
+  title: 'Graduation Project',
+  company: 'Fixed Solutions',
+  period: 'Oct 2023 – Jun 2024',
+  description:
+  'Developed a real-time malware detection system using deep learning. Implemented two advanced neural networks: one for analyzing system call sequences and another for detecting malicious patterns from byte-level file images. Achieved strong performance including 81.14% accuracy and 65.32% precision on Zero-day malware, supported by a custom Selenium-based dataset scraper.',
+  skills: [
+  'Deep Learning',
+  'Malware Detection',
+  'Computer Vision',
+  'Byte Image Processing',
+  'Python',
+  'Tensorflow',
+  'Selenium']
+
+}];
+
 
 const education = [
-  {
-    degree: 'Deep Learning for Computer Vision Diploma',
-    institution: 'NTI',
-    period: 'Dec 2024 – Feb 2025',
-  },
-  {
-    degree: 'B.Sc. Computer & Systems Engineering',
-    institution: 'Ain Shams University',
-    period: '2019 – 2024',
-  },
-];
+{
+  degree: 'Deep Learning for Computer Vision Diploma',
+  institution: 'NTI',
+  period: 'Dec 2024 – Feb 2025'
+},
+{
+  degree: 'B.Sc. Computer & Systems Engineering',
+  institution: 'Ain Shams University',
+  period: '2019 – 2024'
+}];
+
 
 const skillsData = {
   programmingLanguages: ['Python', 'C', 'Java', 'JavaScript'],
   librariesAndFrameworks: [
-    'FastAPI',
-    'LangChain',
-    'OpenAI',
-    'PyTorch',
-    'TensorFlow',
-    'Streamlit',
-    'NumPy',
-    'scikit-learn',
-    'Transformers',
-    'Selenium',
-  ],
+  'FastAPI',
+  'LangChain',
+  'OpenAI',
+  'PyTorch',
+  'TensorFlow',
+  'Streamlit',
+  'NumPy',
+  'scikit-learn',
+  'Transformers',
+  'Selenium'],
+
   toolsAndPlatforms: [
-    'Amazon Web Services (AWS)',
-    'SQL',
-    'NoSQL (MongoDB)',
-    'Vector Databases',
-    'Git',
-    'Docker',
-    'Excel (Power Query, Power Pivot)',
-    'Vibe coding',
-  ],
+  'Amazon Web Services (AWS)',
+  'SQL',
+  'NoSQL (MongoDB)',
+  'Vector Databases',
+  'Git',
+  'Docker',
+  'Excel (Power Query, Power Pivot)',
+  'Vibe coding']
+
 };
 
 export function AboutSection() {
@@ -107,7 +107,7 @@ export function AboutSection() {
         <ScrollReveal delay={0.1}>
           <div className="max-w-3xl mx-auto mb-16">
             <p className="text-lg text-muted-foreground leading-relaxed text-center">
-              I'm a Data Scientist and AI Engineer passionate about designing intelligent systems that solve real-world problems. I specialize in deep learning, LLMs, AI agents, and building scalable end-to-end ML pipelines.
+
             </p>
           </div>
         </ScrollReveal>
@@ -125,8 +125,8 @@ export function AboutSection() {
               </div>
 
               <div className="space-y-6">
-                {experience.map((exp, index) => (
-                  <div key={index} className="border-l-2 border-accent/30 pl-4 py-2">
+                {experience.map((exp, index) =>
+                <div key={index} className="border-l-2 border-accent/30 pl-4 py-2">
                     <h4 className="font-semibold text-foreground">{exp.title}</h4>
                     <p className="text-muted-foreground">{exp.company}</p>
                     <p className="text-sm text-accent mb-2">{exp.period}</p>
@@ -134,17 +134,17 @@ export function AboutSection() {
                     <p className="text-sm text-muted-foreground mb-3">{exp.description}</p>
 
                     <div className="flex flex-wrap gap-2">
-                      {exp.skills.map((skill, i) => (
-                        <span
-                          key={i}
-                          className="text-xs px-2 py-1 rounded-md bg-accent/10 text-accent"
-                        >
+                      {exp.skills.map((skill, i) =>
+                    <span
+                      key={i}
+                      className="text-xs px-2 py-1 rounded-md bg-accent/10 text-accent">
+
                           {skill}
                         </span>
-                      ))}
+                    )}
                     </div>
                   </div>
-                ))}
+                )}
               </div>
             </div>
           </ScrollReveal>
@@ -193,13 +193,13 @@ export function AboutSection() {
                 </h3>
 
                 <div className="space-y-4">
-                  {education.map((edu, index) => (
-                    <div key={index} className="border-l-2 border-accent/30 pl-4 py-2">
+                  {education.map((edu, index) =>
+                  <div key={index} className="border-l-2 border-accent/30 pl-4 py-2">
                       <h4 className="font-semibold text-foreground">{edu.degree}</h4>
                       <p className="text-muted-foreground">{edu.institution}</p>
                       <p className="text-sm text-accent">{edu.period}</p>
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
 
@@ -208,6 +208,6 @@ export function AboutSection() {
 
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
