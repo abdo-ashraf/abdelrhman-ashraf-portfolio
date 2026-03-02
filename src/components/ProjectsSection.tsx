@@ -24,17 +24,17 @@ const projects = [{
   link: "https://github.com/abdo-ashraf/Vulnerability-Analyzer-Agent",
   image: "/assets/projects/vuln-agent.png"
 }, {
-  title: "SQL Practice - Sales Analytics",
-  description: "A SQL analytics project using a Contoso dataset. Covers intermediate and advanced SQL concept queries executed in Jupyter Notebook.",
-  tags: ["SQL", "PostgreSQL", "Data Analytics", "Jupyter"],
-  link: "https://github.com/abdo-ashraf/postgresql-practicing-queries",
-  image: "/assets/projects/sql-analytics.png"
-},{
   title: "GPU Optimization Framework",
   description: "Framework implementing mixed precision training, Torch Compile, and memory optimization techniques for faster model training.",
   tags: ["PyTorch", "CUDA", "Optimization"],
   link: "https://github.com/abdo-ashraf/Optimizing-GPU-Utilization-at-Training",
   image: "/assets/projects/gpu-opt.png"
+}, {
+  title: "Manara - Serverless REST API Architecture (AWS)",
+  description: "Production-grade serverless REST API architecture design on AWS using API Gateway, Lambda, DynamoDB, S3, and CloudFront. Focused on scalability, IAM-based security, HTTPS with ACM, and observability via CloudWatch (architecture design project).",
+  tags: ["AWS", "Serverless", "Architecture Design", "IAM", "CloudWatch"],
+  link: "https://github.com/abdo-ashraf/Manara-Serverless-REST-API-with-DynamoDB-and-API-Gateway-Architecture",
+  image: "/assets/projects/manara-serverless.jpg"
 }, {
   title: "NMT Multi-Model Training",
   description: "Neural Machine Translation framework supporting multiple model architectures with unified training pipeline and evaluation metrics.",
@@ -42,12 +42,55 @@ const projects = [{
   link: "https://github.com/abdo-ashraf/NMT-MultiModel-Training-Framework",
   image: "/assets/projects/nmt.png"
 }, {
+  title: "Simple To-Do App (Lovable + Next.js)",
+  description: "Responsive task management app built using Lovable for AI-assisted development, practicing vibe coding workflows. Developed with Next.js 15, Tailwind CSS v4, and TypeScript featuring smart categories, inline editing, and LocalStorage persistence.",
+  tags: ["Vibe Coding", "Next.js", "TypeScript", "TailwindCSS", "Lovable"],
+  link: "https://github.com/abdo-ashraf/simple-ToDo-app",
+  image: "/assets/projects/todo-app.png"
+}, {
+  title: "Real Image Denoising with Feature Attention (RIDNet vs DnCNN)",
+  description: "Implementation and comparison of RIDNet and DnCNN for real image denoising on the BSD500 dataset. Achieved PSNR improvement from 20.3dB (noisy) to 26.3dB using RIDNet, outperforming DnCNN under limited data constraints.",
+  tags: ["Computer Vision", "PyTorch", "CNN", "Image Denoising", "Research Implementation"],
+  link: "https://github.com/abdo-ashraf/IMPLEMENTING-Real-Image-Denoising-with-Feature-Attention",
+  image: "/assets/projects/image-denoising.png"
+}, {
   title: "Image Classification & Localization",
   description: "Deep learning model for simultaneous image classification and object localization with custom loss functions and augmentation strategies.",
   tags: ["Computer Vision", "CNN", "TensorFlow"],
   link: "http://www.github.com/abdo-ashraf/Image-Classification-with-localization",
   image: "/assets/projects/localization.png"
-}];
+}, {
+  title: "SQL Practice - Sales Analytics",
+  description: "A SQL analytics project using a Contoso dataset. Covers intermediate and advanced SQL concept queries executed in Jupyter Notebook.",
+  tags: ["SQL", "PostgreSQL", "Data Analytics", "Jupyter"],
+  link: "https://github.com/abdo-ashraf/postgresql-practicing-queries",
+  image: "/assets/projects/sql-analytics.png"
+},{
+  title: "Transformer Paper Implementation (Attention Is All You Need)",
+  description: "PyTorch implementation of the original Transformer architecture from the 'Attention Is All You Need' paper. Rebuilt multi-head self-attention, encoder-decoder stacks, residual connections, and layer normalization from scratch (excluding positional encoding).",
+  tags: ["PyTorch", "Transformers", "Deep Learning", "NLP", "Research Implementation"],
+  link: "https://github.com/abdo-ashraf/Paper-Implementing_Attention-Is-All-You-Need",
+  image: "/assets/projects/transformer.png"
+}, {
+  title: "AK-NanoGPT (Transformer Language Model)",
+  description: "Lightweight Transformer-based language model inspired by Andrej Karpathy’s NanoGPT and the 'Attention Is All You Need' paper. Implements self-attention, multi-head attention, positional encodings, and autoregressive training in a minimal, educational setup.",
+  tags: ["PyTorch", "LLMs", "Transformers", "NanoGPT", "Deep Learning"],
+  link: "https://github.com/abdo-ashraf/AK-NanoGpt",
+  image: "/assets/projects/nanogpt.png"
+}, {
+  title: "Movie Reviews Sentiment Analysis (LSTM)",
+  description: "Sequence-based sentiment analysis model for IMDB movie reviews implemented in both TensorFlow and PyTorch. Achieved ~84% test accuracy and deployed publicly on Hugging Face Spaces for real-time inference.",
+  tags: ["NLP", "LSTM", "TensorFlow", "PyTorch", "HuggingFace"],
+  link: "https://github.com/abdo-ashraf/Movie-reviews-analyzer-end2end",
+  image: "/assets/projects/reviews-analyzer.png"
+}, {
+  title: "Facial Landmark Detection (Streamlit Deployment)",
+  description: "Deep learning-based facial landmark detection model trained on the LaPa dataset with boundary-aware segmentation concepts. Achieved stable train/validation/test loss (~0.66) and deployed using Streamlit for real-time inference.",
+  tags: ["Computer Vision", "PyTorch", "Segmentation", "Streamlit", "Deep Learning"],
+  link: "https://github.com/abdo-ashraf/Facial-Landmark-Detection",
+  image: "/assets/projects/facial-landmarks.png"
+}
+];
 export function ProjectsSection() {
   const [showAll, setShowAll] = useState(false);
   const visibleProjects = showAll ? projects : projects.slice(0, 3);
